@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+
+}
+
+:root{
+}
+
+html, body{
+    height:100%;
+}
+
+#root{
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    
+}
+header{
+}
+
+header svg{
+    height:20px;
+}
+
+main{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow:1;
+}
