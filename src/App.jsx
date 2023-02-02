@@ -1,4 +1,5 @@
 import {ReactComponent as Logo} from "./assets/jetplane-logo.svg";
+import {ReactComponent as Search} from "./assets/search.svg";
 import "./App.css";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         </ul>
       </header>
       <main>
+        <h2>Encuentra y vuela hacia tu próxima aventura</h2>
         <form className="booking__form">
           <div className="input__container departure__and__destination">
             <label htmlFor="departure">ORIGEN</label>
@@ -37,6 +39,7 @@ function App() {
             <label htmlFor="passengers__class">PASAJEROS Y CLASE</label>
             <input name="passengers__class" type="text" placeholder="Cuantos pasajeros y que clase"></input>
           </div>
+          <button><Search/></button>
         </form>
       </main>
     </>

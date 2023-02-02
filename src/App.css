@@ -5,8 +5,7 @@
     text-decoration: none;
 }
 
-:root{
-    font-size:16px;
+:root{ /* NO tengo que poner esto, el browser es default */
     font-family:'Poppins', sans-serif;
     background-color: black;
     color:white;
@@ -23,10 +22,11 @@ html, body{
     
 }
 header{
+    font-size:0.8rem;
     display:flex;
     justify-content: space-between;
     align-items:center;
-    padding:2.5rem 4rem;
+    padding:2rem 4rem;
 }
 
 header ul{
@@ -64,36 +64,68 @@ header ul li:nth-child(2) a{
 
 main{
     display:flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     flex-grow:1;
 }
 
+main h2{
+    font-size:1.7rem;
+    font-weight:500;
+}
+
 .booking__form{
-    display:flex;
-    justify-content: center;
+    font-size:0.7rem;
+    display: grid;
+    grid-template-columns: 250px 250px 150px 150px 200px 1fr;
     align-items: center;
-    flex-wrap:wrap;
-    padding:2rem;
-    background-color: #F6F6F9;
-    border-radius:50px;
     gap:15px;
-    font-size:0.8rem;
+    padding:1.5rem;
+    border-style:solid;
+    border-width: 2px;
+    border-color:#1f1f1f;
+    border-radius:50px;
+}
+
+.booking__form button{
+    cursor:pointer;
+    padding:1.5rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-style:none;
+    border-radius:100%;
+    background-color:#2F82FF;
+    box-shadow: 0px 15px 20px rgba(47, 130, 255, 0.4);
+}
+
+.booking__form button svg{
+    height:20px;
+    fill: white;
 }
 
 .input__container{
-    color:black;
+    font-weight: 500;
     display:flex;
     flex-direction: column;
-    font-weight: 500;
+
 }
 
 .input__container input{
+    color:rgb(177, 177, 177);
     font-family: "Poppins", sans-serif;
+    font-size:0.8rem;
     border-style: none;
-    border-radius:15px;
+    border-radius:10px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
-    padding:0.7em;
+    padding:0.7rem;
+    background-color: #1a1a1a;
+}
+
+.input__container input:focus{
+    outline:none;
+    border:1px solid #2F82FF;
 }
 
 .input__container input::placeholder{
@@ -102,14 +134,16 @@ main{
     color:#969696;
 }
 
+/* 
 .departure__and__destination{
     max-width:250px;
 }
 
 .dates{
-    max-width:150px;         /* ESTO TENDRIA IR CON GRID, PARA EVITAR LOS MAX WIDTH */
+    max-width:150px;
 }
 
 .passengers__and__class{
     max-width:200px;
-}
+} 
+*/
