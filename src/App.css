@@ -64,11 +64,52 @@ header ul li:nth-child(2) a{
 
 main{
     display:flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     flex-grow:1;
 }
 
 .booking__form{
-    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    padding:2rem;
+    background-color: #F6F6F9;
+    border-radius:50px;
+    gap:15px;
+    font-size:0.8rem;
+}
+
+.input__container{
+    color:black;
+    display:flex;
+    flex-direction: column;
+    font-weight: 500;
+}
+
+.input__container input{
+    font-family: "Poppins", sans-serif;
+    border-style: none;
+    border-radius:15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+    padding:0.7em;
+}
+
+.input__container input::placeholder{
+    font-size:0.9em;
+    font-weight:400;
+    color:#969696;
+}
+
+.departure__and__destination{
+    max-width:250px;
+}
+
+.dates{
+    max-width:150px;         /* ESTO TENDRIA IR CON GRID, PARA EVITAR LOS MAX WIDTH */
+}
+
+.passengers__and__class{
+    max-width:200px;
 }
