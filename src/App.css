@@ -2,10 +2,14 @@
     box-sizing: border-box;
     padding:0;
     margin:0;
-
+    text-decoration: none;
 }
 
 :root{
+    font-size:16px;
+    font-family:'Poppins', sans-serif;
+    background-color: black;
+    color:white;
 }
 
 html, body{
@@ -19,10 +23,43 @@ html, body{
     
 }
 header{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding:2.5rem 4rem;
 }
 
-header svg{
-    height:20px;
+header ul{
+    list-style: none;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+}
+
+header ul a {
+    color:white;
+    font-weight: 400;
+}
+
+header ul li:nth-child(2) a{
+    padding:1rem 1.5rem;
+    border-radius:50px;
+    background:linear-gradient(90deg, #2F82FF 0%, #40EEF9 80.67%);
+    box-shadow: 0px 0px 15px #2F82FF;
+}
+
+.header__logo{
+    color:white;
+    font-size:0.7rem;
+    font-weight: 100;
+    display:flex;
+    align-items: center;
+    gap:5px;
+}
+
+.header__logo svg{
+    height:25px;
 }
 
 main{
@@ -30,4 +67,8 @@ main{
     flex-direction: column;
     justify-content: space-between;
     flex-grow:1;
+}
+
+.booking__form{
+    
 }

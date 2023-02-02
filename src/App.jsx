@@ -6,11 +6,19 @@ function App() {
   return (
     <>
       <header>
-        <Logo/>Jetplane
+        <div className="header__logo">
+          <Logo/>
+          <h1>Jetblue</h1>
+        </div>
+        <ul>
+          <li><a href="/">Mis vuelos</a></li>
+          <li><a href="/">Vuelos populares</a></li>
+        </ul>
       </header>
       <main>
-        hola
-        <input type="text"/>
+        <form className="booking__form">
+          
+        </form>
       </main>
     </>
   )
