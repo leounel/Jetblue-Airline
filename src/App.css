@@ -13,7 +13,7 @@
 }
 
 html, body{
-    height:100%;
+    min-height:100%;
 }
 
 #root{
@@ -23,28 +23,34 @@ html, body{
     
 }
 header{
-    font-size:0.8rem;
+    font-size:0.9rem;
     display:flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items:center;
-    padding:2rem 4rem;
+    padding:2rem 0;
+    gap:20px;
 }
 
 header ul{
     list-style: none;
+    position:fixed;
+    bottom: 0;
     display:flex;
-    justify-content: center;
-    align-items: center;
+    background-color: black;
+    border:1px solid #242424;
+    border-radius:50px;
     gap:40px;
+    padding:1.2rem;
 }
 
 header ul a {
     color:white;
-    font-weight:500;
+    font-weight:400;
 }
 
 header ul li:nth-child(2) a{
-    padding:1rem 1.2rem;
+    padding:0.8rem;
     border-radius:50px;
     background:linear-gradient(90deg, #2F82FF 0%, #40EEF9 80.67%);
     box-shadow: 0px 0px 15px #2F82FF;
@@ -55,8 +61,9 @@ header ul li:nth-child(2) a{
     font-size:0.7rem;
     font-weight: 100;
     display:flex;
+    flex-direction: column;
     align-items: center;
-    gap:5px;
+    gap:0px;
 }
 
 .header__logo svg{
@@ -66,22 +73,26 @@ header ul li:nth-child(2) a{
 main{
     display:flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content:center;
     align-items: center;
+    gap:5rem;
     flex-grow:1;
 }
 
 main h2{
-    font-size:1.7rem;
+    font-size:1.4rem;
     font-weight:500;
+    text-align: center;
+    margin-top:2rem;
+    padding:1rem;
 }
 
 .booking__form{
     font-size:0.7rem;
     display: grid;
-    grid-template-columns: 25% 25% 10% 10% 15% 1fr;
+    grid-template-columns: 5% 5% 5% 5% 5%;
     align-items: center;
-    width:90%;
+    width: 80%;
     gap:15px;
     padding:1.5rem;
     border-style:solid;
@@ -134,18 +145,4 @@ main h2{
     font-size:0.9em;
     font-weight:400;
     color:#969696;
-}
-
-@media (max-width:37.5em){
-    body{
-    }
-
-    header{
-        justify-content: space-between;
-        padding:2rem 1.2rem;
-    }
-
-    header ul{
-        gap:20px;
-    }
 }
