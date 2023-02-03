@@ -84,9 +84,9 @@ main h2{
     width:90%;
     gap:15px;
     padding:1.5rem;
-    border-style:solid;
-    border-width: 1px;
-    border-color:#1f1f1f;
+    border: 1px solid transparent;
+    background: linear-gradient(black,black) padding-box,
+                linear-gradient(180deg, #40b5f9 ,#2F82FF , rgb(9, 33, 34), black) border-box;
     border-radius:15px;
 }
 
