@@ -1,5 +1,8 @@
 import {ReactComponent as Logo} from "./assets/jetplane-logo.svg";
+import {ReactComponent as Plane} from "./assets/plane.svg"
 import {ReactComponent as Search} from "./assets/search.svg";
+import {ReactComponent as Roundtrip} from "./assets/roundtrip.svg";
+import {ReactComponent as Arrival} from "./assets/arrival.svg";
 import "./App.css";
 
 function App() {
@@ -12,13 +15,19 @@ function App() {
           <h1>Jetblue</h1>
         </div>
         <ul>
-          <li><a href="/">Mis vuelos</a></li>
           <li><a href="/">Vuelos populares</a></li>
         </ul>
       </header>
       <main>
         <h2>Encuentra y vuela hacia tu próxima aventura</h2>
         <form className="booking__form">
+          <div className="filters__form">
+            <div>
+              <span>One Way</span>
+              <span>Round Trip</span>
+            </div>
+            <span className="filter__myflights"><Plane/>Mis vuelos</span>
+          </div>
           <div className="input__container departure__and__destination">
             <label htmlFor="departure">ORIGEN</label>
             <input name="departure" type="text" placeholder="¿De donde?..."/>
