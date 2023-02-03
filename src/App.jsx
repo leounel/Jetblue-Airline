@@ -32,6 +32,7 @@ function App() {
             <div className="input__container">
               <label htmlFor="departure">ORIGEN</label>
               <input id="departure" name="departure" type="text" placeholder="¿De dónde?"/>
+              <div className="search__suggestion"></div>
             </div>
             <div className="input__container">
               <label htmlFor="arrival">DESTINO</label>

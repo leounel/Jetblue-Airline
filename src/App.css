@@ -161,6 +161,8 @@ main h2{
 }
 
 .input__container{
+    width:100%;
+    position:relative;
     font-weight: 500;
     display:flex;
     flex-direction: column;
@@ -188,6 +190,18 @@ main h2{
     color:#969696;
 }
 
+.search__suggestion{
+    display:none;
+    position:absolute;
+    z-index: 99;
+    width:100%;
+    min-height: 100px;
+    top:100%;
+    margin-top:5px;
+    border-radius: 5px;
+    background-color: red;
+}
+
 #departure{
     background: url(assets/departure.svg) 10px no-repeat;
     text-indent: 3ch;
@@ -212,5 +226,21 @@ main h2{
 
 
 .departure__and__destination, .dates, .passengers__and__class{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
 
+@media (min-width:25em){
+    .dates{
+        flex-direction: row;
+    }
+}
+
+@media (min-width:31.25em){
+    .departure__and__destination{
+        flex-direction: row;
+    }
 }
