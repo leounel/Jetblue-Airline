@@ -28,25 +28,31 @@ function App() {
             </div>
             <span className="filter__myflights"><Plane/>Mis vuelos</span>
           </div>
-          <div className="input__container departure__and__destination">
-            <label htmlFor="departure">ORIGEN</label>
-            <input id="departure" name="departure" type="text" placeholder="¿De dónde?"/>
+          <div className="departure__and__destination">
+            <div className="input__container">
+              <label htmlFor="departure">ORIGEN</label>
+              <input id="departure" name="departure" type="text" placeholder="¿De dónde?"/>
+            </div>
+            <div className="input__container">
+              <label htmlFor="arrival">DESTINO</label>
+              <input id="arrival" name="arrival" type="text" placeholder="¿Hacia dónde?"/>
+            </div>
           </div>
-          <div className="input__container departure__and__destination">
-            <label htmlFor="arrival">DESTINO</label>
-            <input id="arrival" name="arrival" type="text" placeholder="¿Hacia dónde?"/>
+          <div className="dates">
+            <div className="input__container">
+              <label htmlFor="outbound">IDA</label>
+              <input id="outbound" name="outbound" type="text" placeholder="dd/mm/aa"/>
+            </div>
+            <div className="input__container">
+              <label htmlFor="return">VUELTA</label>
+              <input id="return" name="return" type="text" placeholder="dd/mm/aa"/>
+            </div>
           </div>
-          <div className="input__container dates">
-            <label htmlFor="outbound">IDA</label>
-            <input id="outbound" name="outbound" type="text" placeholder="dd/mm/aa"/>
-          </div>
-          <div className="input__container dates">
-            <label htmlFor="return">VUELTA</label>
-            <input id="return" name="return" type="text" placeholder="dd/mm/aa"/>
-          </div>
-          <div className="input__container passengers__and__class">
-            <label htmlFor="passengers__class">PASAJEROS Y CLASE</label>
-            <input id="passengers_class" name="passengers__class" type="text" placeholder="¿Cuántas personas?"></input>
+          <div className="passengers__and__class">
+            <div className="input__container">
+              <label htmlFor="passengers__class">PASAJEROS Y CLASE</label>
+              <input id="passengers_class" name="passengers__class" type="text" placeholder="¿Cuántas personas?"></input>
+            </div>
           </div>
           <div className="button__container">
             <button><Search/></button>

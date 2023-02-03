@@ -82,10 +82,10 @@ main h2{
     grid-template-columns: 1fr;
     align-items: center;
     width:90%;
-    gap:15px;
+    gap:30px;
     padding:1.5rem;
     border: 1px solid transparent;
-    background: linear-gradient(black,black) padding-box,
+    background: linear-gradient(black, black) padding-box,
                 linear-gradient(180deg, #40b5f9 ,#2F82FF , rgb(9, 33, 34), black) border-box;
     border-radius:15px;
 }
@@ -174,7 +174,6 @@ main h2{
     font-size:0.8rem;
     border:1px solid #1f1f1f;
     border-radius:10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
     padding:0.7rem;
 }
 
@@ -192,19 +191,26 @@ main h2{
 #departure{
     background: url(assets/departure.svg) 10px no-repeat;
     text-indent: 3ch;
-}   
+}
 
 #arrival{
     background: url(assets/arrival.svg) 10px no-repeat;
     text-indent: 3ch;
-}   
+}
+
 
 #outbound, #return{
     background: url(assets/calendar.svg) 10px no-repeat;
     text-indent: 3ch;
 }   
 
+
 #passengers_class{
     background: url(assets/passengers.svg) 10px no-repeat;
     text-indent: 3ch;
 }   
+
+
+.departure__and__destination, .dates, .passengers__and__class{
+
+}
