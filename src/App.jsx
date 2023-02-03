@@ -30,25 +30,27 @@ function App() {
           </div>
           <div className="input__container departure__and__destination">
             <label htmlFor="departure">ORIGEN</label>
-            <input name="departure" type="text" placeholder="¿De donde?..."/>
+            <input id="departure" name="departure" type="text" placeholder="¿De dónde?"/>
           </div>
           <div className="input__container departure__and__destination">
             <label htmlFor="arrival">DESTINO</label>
-            <input name="arrival" type="text" placeholder="¿Hacia donde?..."/>
+            <input id="arrival" name="arrival" type="text" placeholder="¿Hacia dónde?"/>
           </div>
           <div className="input__container dates">
             <label htmlFor="outbound">IDA</label>
-            <input name="outbound" type="text" placeholder="dd/mm/aa"/>
+            <input id="outbound" name="outbound" type="text" placeholder="dd/mm/aa"/>
           </div>
           <div className="input__container dates">
             <label htmlFor="return">VUELTA</label>
-            <input name="return" type="text" placeholder="dd/mm/aa"/>
+            <input id="return" name="return" type="text" placeholder="dd/mm/aa"/>
           </div>
           <div className="input__container passengers__and__class">
             <label htmlFor="passengers__class">PASAJEROS Y CLASE</label>
-            <input name="passengers__class" type="text" placeholder="Cuantos pasajeros y que clase"></input>
+            <input id="passengers_class" name="passengers__class" type="text" placeholder="¿Cuántas personas?"></input>
           </div>
-          <button><Search/></button>
+          <div className="button__container">
+            <button><Search/></button>
+          </div>
         </form>
       </main>
     </>
