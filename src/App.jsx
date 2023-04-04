@@ -4,61 +4,48 @@ import {ReactComponent as Search} from "./assets/search.svg";
 import {ReactComponent as Roundtrip} from "./assets/roundtrip.svg";
 import {ReactComponent as Arrival} from "./assets/arrival.svg";
 import "./App.css";
+import { useRef, useEffect } from "react";
 
 function App() {
+  const gradientRef = useRef(null);
+
+  useEffect(() => {
+    let degree = 360;
+    const interval = setInterval(() => {
+      if (degree === 0) degree = 360;
+      degree -= 0.5; // TODO ESTO PROBABLEMENTE CON THEATREJS O SE VE MEJOR GSAP EN TERMINOS DE PERFORMANCE Y THEATRE ES MEDIO DOLRO DE HUEVOS PONERLO.
+      if (gradientRef.current) {
+      gradientRef.current.style.backgroundImage = `linear-gradient(black, black),
+                linear-gradient(${degree}deg, #00fff2 ,#2F82FF , black, black)`;
+      }
+    }, 10);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
       <header>
-        <div className="header__logo">
           <Logo/>
-          <h1>Jetblue</h1>
-        </div>
-        <ul>
+          <h1>Celeste Air</h1>
+        {/* <ul>
           <li><a href="/">Vuelos populares</a></li>
-        </ul>
+        </ul> */}
       </header>
       <main>
         <h2>Encuentra y vuela hacia tu próxima aventura</h2>
-        <form className="booking__form">
-          <div className="filters__form">
-            <div>
-              <span>One Way</span>
-              <span>Round Trip</span>
-            </div>
-            <span className="filter__myflights"><Plane/>Mis vuelos</span>
+        <section className="buttons-section">
+          <button ref={gradientRef}>Buscar vuelo</button>
+          <a href="/">Vuelos populares</a>
+        </section>
+        <section className="preview-section">
+          <h5>Vista previa</h5>
+          <div className="img-container">
+            <img src="./src/assets/southisland-mobile.jpg"></img>
           </div>
-          <div className="departure__and__destination">
-            <div className="input__container">
-              <label htmlFor="departure">ORIGEN</label>
-              <input id="departure" name="departure" type="text" placeholder="¿De dónde?"/>
-              <div className="search__suggestion"></div>
-            </div>
-            <div className="input__container">
-              <label htmlFor="arrival">DESTINO</label>
-              <input id="arrival" name="arrival" type="text" placeholder="¿Hacia dónde?"/>
-            </div>
+          <div className="img-container">
+            <img src="./src/assets/california-mobile.jpg"></img>
           </div>
-          <div className="dates">
-            <div className="input__container">
-              <label htmlFor="outbound">IDA</label>
-              <input id="outbound" name="outbound" type="text" placeholder="dd/mm/aa"/>
-            </div>
-            <div className="input__container">
-              <label htmlFor="return">VUELTA</label>
-              <input id="return" name="return" type="text" placeholder="dd/mm/aa"/>
-            </div>
-          </div>
-          <div className="passengers__and__class">
-            <div className="input__container">
-              <label htmlFor="passengers__class">PASAJEROS Y CLASE</label>
-              <input id="passengers_class" name="passengers__class" type="text" placeholder="¿Cuántas personas?"></input>
-            </div>
-          </div>
-          <div className="button__container">
-            <button><Search/></button>
-          </div>
-        </form>
+        </section>
       </main>
     </>
   )

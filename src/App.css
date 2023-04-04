@@ -5,7 +5,7 @@
     text-decoration: none;
 }
 
-:root{ /* NO tengo que poner esto, el browser es default */
+:root{
     font-family:'Poppins', sans-serif;
     background-color: black;
     color:white;
@@ -13,6 +13,7 @@
 }
 
 html, body{
+    height:100%;
     min-height:100%;
 }
 
@@ -23,38 +24,20 @@ html, body{
     
 }
 header{
-    font-size:0.8rem;
-    display:flex;
-    justify-content: space-between;
-    align-items:center;
-    padding:1.5rem 1rem;
-}
-
-header ul{
-    list-style: none;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    border-radius:50px;
-}
-
-header ul li a{
-    color:white;
-    padding:0.7rem;
-    border-radius:50px;
-    background:linear-gradient(90deg, #2F82FF 0%, #40EEF9 80.67%);
-    box-shadow: 0px 0px 15px #2F82FF;
-}
-
-.header__logo{
-    color:white;
-    font-size:0.5rem;
     display:flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    align-items:center;
+    padding:2.5rem 0;
 }
 
-.header__logo svg{
+header h1{
+    font-size:1.2rem;
+    font-weight:500;
+    font-family:'Playfair Display';
+}
+
+header svg{
     height:25px;
 }
 
@@ -63,8 +46,7 @@ main{
     flex-direction: column;
     justify-content:center;
     align-items: center;
-    gap:10rem;
-    flex:1;
+
 }
 
 main h2{
@@ -72,175 +54,82 @@ main h2{
     font-weight:400;
     text-align: center;
     margin-top:4rem;
-    padding:2rem;
-}
-
-.booking__form{
-    position:relative;
-    font-size:0.7rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    width:90%;
-    gap:30px;
     padding:1.5rem;
-    border: 1px solid transparent;
-    background: linear-gradient(black, black) padding-box,
-                linear-gradient(180deg, #40b5f9 ,#2F82FF , rgb(9, 33, 34), black) border-box;
-    border-radius:15px;
 }
 
-.booking__form button{
-    cursor:pointer;
-    padding:1.5rem;
-    width:70px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    border-style:none;
-    border-radius:100%;
-    background-color:#2F82FF;
-    box-shadow: 0px 15px 20px rgba(47, 130, 255, 0.4);
-}
-
-.booking__form button svg{
-    height:20px;
-    fill: white;
-}
-
-.button__container{
+.buttons-section{
     display:flex;
     justify-content: center;
     align-items: center;
-    margin-top:1.5rem;
-}
-
-.filters__form{
-    color:white;
-    position:absolute;
-    top: -45px;
-    display:flex;
-    justify-content: space-between;
-    width:100%;
-    gap:25px;
-    font-weight:500;
-}
-
-.filters__form span{    
-    border-radius: 15px;
-    padding:0.4rem 0.5rem;
-}
-
-.filters__form div{
-    display:flex;
-    align-items: center;
-    justify-content: center;
     gap:15px;
+    margin-top:6rem;
 }
 
-.filter__myflights{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    gap:5px;
-    background:linear-gradient(90deg, #2F82FF 0%, #40EEF9 80.67%);
-    box-shadow: 0px 5px 20px rgba(47, 130, 255, 0.4);
-}
-
-
-.filters__form svg{
-    fill:white;
-    height:20px;
-    width:20px;
-}
-
-.filter__myflights svg{
-    fill:white;
-    height:20px;
-    width:20px;
-}
-
-.input__container{
-    width:100%;
-    position:relative;
-    font-weight: 500;
-    display:flex;
-    flex-direction: column;
-    gap:5px;
-}
-
-.input__container input{
-    width:100%;
-    color:rgb(177, 177, 177);
-    font-family: "Poppins", sans-serif;
+.buttons-section button{
+    --deg-animation: 195deg;
+    cursor: pointer;
+    font-family:'Poppins';
+    font-weight:400;
     font-size:0.8rem;
-    border:1px solid #1f1f1f;
-    border-radius:10px;
-    padding:0.7rem;
+    width:130px;
+    padding:0.7rem 0;
+    border-radius: 50px;
+    color: white;
+    border: 1px solid transparent;
+    background-image: linear-gradient(black, black),
+                linear-gradient(190deg, #00fff2 ,#2F82FF , rgb(9, 33, 34), black);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
 }
 
-.input__container input:focus{
-    outline:none;
-    border:1px solid #2F82FF;
+
+.buttons-section a{
+    position:relative;
+    font-size:0.8rem;
+    text-align: center;
+    width:130px;
+    padding:0.7rem 0;
+    border-radius:50px;
+    color:white;
+    background:linear-gradient(90deg, #2F82FF 0%, #40D7F9 80.67%);
+    box-shadow: 0px 0px 15px #2F82FF;
 }
 
-.input__container input::placeholder{
-    font-size:0.9em;
-    font-weight:300;
-    color:#969696;
-}
-
-.search__suggestion{
-    display:none;
+.buttons-section a::after {
+    content: '';
     position:absolute;
-    z-index: 99;
-    width:100%;
-    min-height: 100px;
-    top:100%;
-    margin-top:5px;
-    border-radius: 5px;
-    background-color: red;
-}
-
-#departure{
-    background: url(assets/departure.svg) 10px no-repeat;
-    text-indent: 3ch;
-}
-
-#arrival{
-    background: url(assets/arrival.svg) 10px no-repeat;
-    text-indent: 3ch;
-}
+    width: 8px;
+    height:8px;
+    border-style: solid;
+    border-width: 0 1.5px 1.5px 0;
+    border-color: transparent white white transparent;
+    bottom: -20px;
+    right:50%;
+    transform:rotate(45deg);
+  }
 
 
-#outbound, #return{
-    background: url(assets/calendar.svg) 10px no-repeat;
-    text-indent: 3ch;
-}   
-
-
-#passengers_class{
-    background: url(assets/passengers.svg) 10px no-repeat;
-    text-indent: 3ch;
-}   
-
-
-.departure__and__destination, .dates, .passengers__and__class{
+.preview-section{
+    position:relative;
     display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap:10px;
+    gap: 25px;
+    margin-top:4rem;
 }
 
-@media (min-width:25em){
-    .dates{
-        flex-direction: row;
-    }
+.preview-section h5{
+    position:absolute;
+    top:-20px;
+    font-size:0.6rem;
+    font-weight: 300;
 }
 
-@media (min-width:31.25em){
-    .departure__and__destination{
-        flex-direction: row;
-    }
+.img-container{
+    height:90px;
+    width:140px;
+}
+
+.img-container img{
+    border-radius: 5px;
+    height:100%;
+    width:100%;
 }
