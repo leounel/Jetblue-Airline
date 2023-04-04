@@ -27,9 +27,6 @@ function App() {
       <header>
           <Logo/>
           <h1>Celeste Air</h1>
-        {/* <ul>
-          <li><a href="/">Vuelos populares</a></li>
-        </ul> */}
       </header>
       <main>
         <h2>Encuentra y vuela hacia tu próxima aventura</h2>
@@ -41,12 +38,19 @@ function App() {
           <h5>Vista previa</h5>
           <div className="img-container">
             <img src="./src/assets/southisland-mobile.jpg"></img>
+            <div className="img-title">
+              <p>South Island, NZ</p>
+            </div>
           </div>
           <div className="img-container">
             <img src="./src/assets/california-mobile.jpg"></img>
+            <div className="img-title">
+              <p>San Francisco, USA</p>
+            </div>
           </div>
         </section>
       </main>
+      <footer>Descubre nuevos horizontes</footer>
     </>
   )
 }
