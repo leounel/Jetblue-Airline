@@ -50,7 +50,7 @@ function App() {
           </div>
         </section>
       </main>
-      <footer>Descubre nuevos horizontes</footer>
+      <footer>Explora nuevos horizontes.</footer>
     </>
   )
 }
