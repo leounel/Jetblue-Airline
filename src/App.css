@@ -19,19 +19,36 @@
 }
 header{
     display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.placeholder{
+    flex:1;
+    padding:1rem;
+}
+
+.arrow svg{
+    margin:1rem;
+    height: 15px;
+}
+
+.logo-container{
+    display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     padding:2.5rem 0;
 }
 
-header h1{
+.logo-container h1{
     font-size:1.2rem;
     font-weight:500;
     font-family:'Playfair Display';
 }
 
-header svg{
+.logo-container svg{
     height:25px;
 }
 
@@ -71,7 +88,7 @@ main h2{
     color: white;
     border: 1px solid transparent;
     background-image: linear-gradient(black, black),
-                linear-gradient(190deg, #00fff2 ,#2F82FF , rgb(9, 33, 34), black);
+                linear-gradient(195deg, #00fff2 ,#2F82FF , black, black);
     background-origin: border-box;
     background-clip: padding-box, border-box;
 }
