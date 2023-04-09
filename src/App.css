@@ -169,9 +169,10 @@ footer{
 }
 
 .credentials-form{
-    margin-top:4rem;
+    position: relative;
+    margin-top:6rem;
     border: 1px solid transparent;
-    border-radius:10px;
+    border-radius:20px;
     background-image: linear-gradient(black, black),
                 linear-gradient(195deg, #00fff2 ,#2F82FF , black, black);
     background-origin: border-box;
@@ -180,14 +181,101 @@ footer{
 
 
 .flight-type-buttons{
+    width:100%;
+    position:absolute;
+    top:-40px;
     display:flex;
     justify-content: space-around;
-    align-items: center;
 }
 
 .flight-type-buttons button{
+    cursor:pointer;
     font-family: 'Poppins';
     color:white;
     border: none;
     background: none;
+}
+
+.destination-inputs-container{
+    display:flex;
+    flex-direction: column;
+    padding:1.5rem;
+    gap:2rem;
+}
+
+.destination-input{
+    font-size:0.7rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:10px;
+}
+
+
+.destination-input input{
+    font-family:'Poppins';
+    font-size:0.7rem;
+    font-weight:300;
+    height: 45px;
+    width:280px;
+    background-color:#171717;
+    color:#676767;
+    border:none;
+    border-radius:10px;
+    text-indent: 2ch;
+}
+
+.dates-container{
+    display: flex;
+    flex-direction: column;
+    padding:1.5rem;
+    padding-top:0;
+    gap:5px;
+}
+
+.dates-container span{
+    font-size:0.7rem;
+    font-weight: 400;
+}
+
+.dates-input-container{
+    display:flex;
+    font-size:0.6rem;
+    gap:40px;
+}
+
+.date-departure,
+.date-return{
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+    color: #676767;
+}
+
+
+.date-departure input,
+.date-return input{
+    font-family: 'Poppins';
+    font-size:0.7rem;
+    font-weight: 300;
+    height:45px;
+    width:120px;
+    border:none;
+    border-radius:10px;
+    color: #676767;
+    background-color:#171717;
+    text-indent:2ch;
+}
+
+
+.class-container{
+    padding:1.5rem;
+    padding-top:0;
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.class-container span{
+    font-size:0.7rem;
 }
