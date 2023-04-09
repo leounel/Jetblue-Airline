@@ -9,7 +9,6 @@
     font-family:'Poppins', sans-serif;
     background-color: black;
     color:white;
-    cursor:crosshair;
 }
 
 #root{
@@ -30,8 +29,9 @@ header{
 }
 
 .arrow svg{
-    margin:1rem;
+    margin:1.2rem;
     height: 15px;
+    fill:white;
 }
 
 .logo-container{
@@ -60,7 +60,7 @@ main{
 
 }
 
-main h2{
+.main-landing h2{
     font-size:1.4rem;
     font-weight:400;
     text-align: center;
@@ -148,11 +148,46 @@ main h2{
 }
 
 footer{
-    font-size:0.7rem;
+    font-size:1rem;
     font-weight: 300;
     display:flex;
     justify-content: center;
     align-items: center;
     padding-top:6rem;
     padding-bottom:4rem;
+}
+
+
+
+/* Booking Forms */
+
+.main-booking h2{
+    font-size:1rem;
+    font-weight:400;
+    text-align: center;
+    padding:1rem;
+}
+
+.credentials-form{
+    margin-top:4rem;
+    border: 1px solid transparent;
+    border-radius:10px;
+    background-image: linear-gradient(black, black),
+                linear-gradient(195deg, #00fff2 ,#2F82FF , black, black);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+
+.flight-type-buttons{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flight-type-buttons button{
+    font-family: 'Poppins';
+    color:white;
+    border: none;
+    background: none;
 }

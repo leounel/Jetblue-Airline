@@ -1,10 +1,10 @@
-const Landing = ({setRoute}) => {
+const Landing = ({setBooking}) => {
     return (
     <>
-        <main>
+      <main className="main-landing">
         <h2>Encuentra y vuela hacia tu próxima aventura</h2>
         <section className="buttons-section">
-          <button onClick={() => setRoute(true) }>Buscar vuelo</button>
+          <button onClick={() => setBooking(true) }>Buscar vuelo</button>
           <a href="/">Vuelos populares</a>
         </section>
         <section className="preview-section">
