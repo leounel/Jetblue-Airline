@@ -161,6 +161,9 @@ footer{
 
 /* Booking Forms */
 
+::placeholder{
+    color: #676767;
+}
 .main-booking h2{
     font-size:1rem;
     font-weight:400;
@@ -168,11 +171,31 @@ footer{
     padding:1rem;
 }
 
+
 .credentials-form{
     position: relative;
     margin-top:6rem;
     border: 1px solid transparent;
     border-radius:20px;
+    background-image: linear-gradient(black, black),
+                linear-gradient(195deg, #00fff2 ,#2F82FF,black, black, black);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.credentials-button{
+    font-family: "Poppins";
+    font-weight: 400;
+    margin:1rem;
+    padding:0.9rem;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    width:130px;
     background-image: linear-gradient(black, black),
                 linear-gradient(195deg, #00fff2 ,#2F82FF , black, black);
     background-origin: border-box;
@@ -205,6 +228,7 @@ footer{
 
 .destination-input{
     font-size:0.7rem;
+    font-weight: 300;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -215,11 +239,11 @@ footer{
 .destination-input input{
     font-family:'Poppins';
     font-size:0.7rem;
-    font-weight:300;
+    font-weight:400;
     height: 45px;
     width:280px;
-    background-color:#171717;
-    color:#676767;
+    background-color:#000;
+    color: #c2c2c2;
     border:none;
     border-radius:10px;
     text-indent: 2ch;
@@ -235,7 +259,7 @@ footer{
 
 .dates-container span{
     font-size:0.7rem;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .dates-input-container{
@@ -250,6 +274,7 @@ footer{
     flex-direction: column;
     gap:5px;
     color: #676767;
+    font-weight: 600;
 }
 
 
@@ -257,13 +282,13 @@ footer{
 .date-return input{
     font-family: 'Poppins';
     font-size:0.7rem;
-    font-weight: 300;
+    font-weight: 400;
     height:45px;
     width:120px;
     border:none;
     border-radius:10px;
-    color: #676767;
-    background-color:#171717;
+    color: #c2c2c2;
+    background-color:#000;
     text-indent:2ch;
 }
 
@@ -273,9 +298,32 @@ footer{
     padding-top:0;
     display:flex;
     flex-direction: column;
-    gap:5px;
+    gap:10px;
 }
 
 .class-container span{
     font-size:0.7rem;
+    font-weight: 300;
+}
+
+.class-select{
+    height:45px;
+    width:280px;
+    border-radius:10px;
+    background-color:#000;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #676767;
+}
+
+.class-select span{
+    font-weight: 400;
+}
+
+.class-select div{
+    color:white;
+    cursor: pointer;
+    padding:0.5rem;
+
 }

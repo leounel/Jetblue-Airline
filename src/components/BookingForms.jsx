@@ -32,11 +32,13 @@ const BookingForms = () => {
             </section>
             <section className="class-container">
                 <span>CLASE</span>
-                <select>
-                    <option>Económica</option>
-                    <option>Ejecutiva</option>
-                </select>
+                <div className="class-select">
+                    <div>{"<"}</div>
+                    <span>Clase ejecutiva</span>
+                    <div>{">"}</div>
+                </div>
             </section>
+            <button className="credentials-button" type="button">Reservar</button>
         </form>
     </main>
     );
