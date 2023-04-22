@@ -11,6 +11,15 @@
     color:white;
 }
 
+body{
+    --label-font-size:0.8rem;
+    --label-font-weight:500;
+    --input-font-size:0.65rem;
+    --input-font-weight:400;
+    --input-color:#c2c2c2;
+    --input-placeholder-color:#575757;
+    --input-border-color:#161616;
+}
 #root{
     display:flex;
     flex-direction: column;
@@ -162,7 +171,7 @@ footer{
 /* Booking Forms */
 
 ::placeholder{
-    color: #676767;
+    color: var(--input-placeholder-color);
 }
 .main-booking h2{
     font-size:1rem;
@@ -171,23 +180,25 @@ footer{
     padding:1rem;
 }
 
-
-.credentials-form{
-    position: relative;
-    margin-top:6rem;
+.form-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: 1px solid transparent;
     border-radius:20px;
     background-image: linear-gradient(black, black),
                 linear-gradient(195deg, #00fff2 ,#2F82FF,black, black, black);
     background-origin: border-box;
     background-clip: padding-box, border-box;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
-.credentials-button{
+.booking-form{
+    position: relative;
+    margin-top:6rem;
+}
+
+.form-button{
     font-family: "Poppins";
     font-weight: 400;
     margin:1rem;
@@ -223,12 +234,12 @@ footer{
     display:flex;
     flex-direction: column;
     padding:1.5rem;
-    gap:2rem;
+    gap:1rem;
 }
 
 .destination-input{
-    font-size:0.7rem;
-    font-weight: 300;
+    font-size:var(--label-font-size);
+    font-weight: var(--label-font-weight);
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -238,16 +249,16 @@ footer{
 
 .destination-input input{
     font-family:'Poppins';
-    font-size:0.7rem;
-    font-weight:400;
+    font-size:var(--input-font-size);
+    font-weight:var(--input-font-weight);
     height: 45px;
     width:280px;
     background-image: url(/src/assets/plane.svg);
     background-position: right 10px center;
     background-repeat: no-repeat;
     background-color:#000;
-    color: #c2c2c2;
-    border:none;
+    color: var(--input-color);
+    border:solid 1px var(--input-border-color);
     border-radius:10px;
     text-indent: 2ch;
 }
@@ -261,13 +272,13 @@ footer{
 }
 
 .dates-container span{
-    font-size:0.7rem;
-    font-weight: 300;
+    font-size:var(--label-font-size);
+    font-weight: var(--label-font-weight);
 }
 
 .dates-input-container{
     display:flex;
-    font-size:0.6rem;
+    font-size:var(--input-font-size);
     gap:40px;
 }
 
@@ -284,13 +295,13 @@ footer{
 .date-departure input,
 .date-return input{
     font-family: 'Poppins';
-    font-size:0.7rem;
-    font-weight: 400;
+    font-size:var(--input-font-size);
+    font-weight: var(--label-font-weight);
     height:45px;
     width:120px;
-    border:none;
+    border:solid 1px var(--input-border-color);
     border-radius:10px;
-    color: #c2c2c2;
+    color: var(--input-color);
     background-image: url(/src/assets/calendar.svg);
     background-position: right 10px center;
     background-repeat: no-repeat;
@@ -308,28 +319,160 @@ footer{
 }
 
 .class-container span{
-    font-size:0.7rem;
-    font-weight: 300;
+    font-size:var(--label-font-size);
+    font-weight: var(--label-font-weight);
 }
 
 .class-select{
     height:45px;
     width:280px;
+    border:solid 1px var(--input-border-color);
     border-radius:10px;
     background-color:#000;
     display:flex;
     align-items: center;
-    justify-content: space-around;
-    color: #676767;
+    justify-content: space-between;
 }
 
 .class-select span{
-    font-weight: 400;
+    font-size:var(--input-font-size);
+    color:var(--input-placeholder-color);
+    font-weight: var(--input-font-weight);
 }
 
 .class-select div{
     color:white;
     cursor: pointer;
-    padding:0.5rem;
+    padding:0 1rem;
 
+}
+
+
+/* CREDENTIALS */
+
+.canvas-container{
+    width:250px;
+    height:150px;
+}
+
+.credentials-form{
+    margin-top:1rem;
+    gap:2rem;
+}
+
+.fullname-inputs-container{
+    display:flex;
+    flex-wrap: wrap;
+    padding:1.5rem;
+    padding-bottom:0;
+}
+
+.fullname-inputs-container label{
+    font-size: var(--label-font-size);
+    font-weight:var(--label-font-weight);
+    flex-basis:100%;
+    margin-bottom:5px;
+}
+
+.fullname-inputs-container input{
+    height:45px;
+    width:50%;
+    font-family: 'Poppins';
+    font-size:var(--input-font-size);
+    font-weight: var(--input-font-weight);
+    background:none;
+    border:1px solid var(--input-border-color);
+    border-radius:10px 0 0 10px;
+    text-indent: 6ch;
+    color:var(--input-color);
+    background-image: url(/src/assets/user.svg);
+    background-position: left 10px center;
+    background-repeat: no-repeat;
+    background-color:#000;
+}
+
+.fullname-inputs-container input:nth-child(3){
+    border-left:none;
+    border-radius:0px 10px 10px 0px;
+    text-indent: 3ch;
+    background-image: none;
+}
+
+.full-width-input{
+    font-family:'Poppins';
+    font-size:var(--input-font-size);
+    font-weight: var(--input-font-weight);
+    height:45px;
+    border:1px solid var(--input-border-color);
+    border-radius: 10px;
+    color:var(--input-color);
+    text-indent: 6ch;
+}
+
+.birthday-date-container{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    padding:0 1.5rem;
+    font-size: var(--label-font-size);
+    font-weight: var(--label-font-weight);
+    gap:5px;
+}
+
+.birthday-date-container input{
+    background-image: url(/src/assets/calendar.svg);
+    background-position: left 10px center;
+    background-repeat: no-repeat;
+    background-color: #000;
+}
+
+.nationality-container{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    padding:0 1.5rem;
+    font-size: var(--label-font-size);
+    font-weight: var(--label-font-weight);
+    gap:5px;
+}
+
+.nationality-container input{
+    background-image: url(/src/assets/flag.svg);
+    background-position: left 10px center;
+    background-repeat: no-repeat;
+    background-color: #000;
+}
+
+.email-container{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    padding:0 1.5rem;
+    font-size: var(--label-font-size);
+    font-weight: var(--label-font-weight);
+    gap:5px;
+}
+
+.email-container input{
+    background-image: url(/src/assets/email.svg);
+    background-position: left 10px center;
+    background-repeat: no-repeat;
+    background-color: #000;
+}
+
+.phone-container{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    padding:0 1.5rem;
+    font-size: var(--label-font-size);
+    font-weight: var(--label-font-weight);
+    gap:5px;
+}
+
+.phone-container input{
+    background-image: url(/src/assets/phone.svg);
+    background-position: left 10px center;
+    background-repeat: no-repeat;
+    background-color: #000;
 }
